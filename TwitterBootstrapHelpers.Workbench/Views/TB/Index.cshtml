@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Twitter Bootstrap Helpers";
+}
+
+<h2>Twitter Bootstrap Helpers</h2>
+
+@using (TB.BeginContainer()) {
+
+    using (TB.BeginSpan(2)) {     
+        <p>I'm in a Container</p>
+    }
+    using (TB.BeginRow()) { 
+        <p>I'm a in Row in a Container</p>    
+    }
+}
+
+@using (TB.BeginFluidContainer()) {
+
+    using (TB.BeginSpan(4)) { 
+        <p>I'm in a Fluid Container</p>
+    }
+    using (TB.BeginFluidRow()) { 
+        <p>I'm in a Fluid Row in a Fluid Container</p>    
+    }
+}
+
+@using (TB.BeginForm()) { 
+    <input type="text" />
+}
