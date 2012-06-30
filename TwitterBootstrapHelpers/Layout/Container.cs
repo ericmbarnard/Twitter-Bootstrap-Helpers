@@ -26,7 +26,7 @@ namespace TwitterBootstrapHelpers.Layout
         {
             base.OnWriteTag(tagBuilder, renderMode, viewContext);
 
-            tagBuilder.AddCssClass(Fluid ? TBCss.CONTAINER_FLUID : TBCss.CONTAINER);
+            tagBuilder.AddCssClass(Fluid ? TbCss.CONTAINER_FLUID : TbCss.CONTAINER);
         }
     }
 }

@@ -20,24 +20,24 @@ namespace TwitterBootstrapHelpers
     {
         #region API
 
-        public static ControlGroup BeginControlGroup(this TBHelper helper)
+        public static ControlGroup BeginControlGroup(this TbHelper helper)
         {
             return BeginControlGroupHelper(helper, htmlAttributes: null);
         }
 
-        public static ControlGroup BeginControlGroup(this TBHelper helper, IDictionary<string, object> htmlAttributes)
+        public static ControlGroup BeginControlGroup(this TbHelper helper, IDictionary<string, object> htmlAttributes)
         {
             return BeginControlGroupHelper(helper, htmlAttributes: htmlAttributes);
         }
 
-        public static ControlGroup BeginControlGroup(this TBHelper helper, object htmlAttributes)
+        public static ControlGroup BeginControlGroup(this TbHelper helper, object htmlAttributes)
         {
             return BeginControlGroupHelper(helper, htmlAttributes: HtmlHelper.AnonymousObjectToHtmlAttributes(htmlAttributes));
         } 
 
         #endregion
 
-        private static ControlGroup BeginControlGroupHelper(TBHelper helper, IDictionary<string, object> htmlAttributes)
+        private static ControlGroup BeginControlGroupHelper(TbHelper helper, IDictionary<string, object> htmlAttributes)
         {
             ControlGroup group = new ControlGroup(helper.ViewContext);
 

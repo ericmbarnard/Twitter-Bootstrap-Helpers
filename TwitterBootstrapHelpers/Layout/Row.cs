@@ -28,7 +28,7 @@ namespace TwitterBootstrapHelpers.Layout
             base.OnWriteTag(tagBuilder, renderMode, viewContext);
 
 
-            tagBuilder.AddCssClass(Fluid ? TBCss.ROW_FLUID : TBCss.ROW);
+            tagBuilder.AddCssClass(Fluid ? TbCss.ROW_FLUID : TbCss.ROW);
         }
     }
 }

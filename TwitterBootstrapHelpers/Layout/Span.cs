@@ -29,12 +29,12 @@ namespace TwitterBootstrapHelpers.Layout
 
             if (SpanWidth < 17 && SpanWidth > 0)
             {
-                tagBuilder.AddCssClass(TBCss.Span(SpanWidth));
+                tagBuilder.AddCssClass(TbCss.Span(SpanWidth));
             }
 
             if (Offset.HasValue && Offset > 0 && Offset < 17)
             {
-                tagBuilder.AddCssClass(TBCss.Offset(Offset.Value));
+                tagBuilder.AddCssClass(TbCss.Offset(Offset.Value));
             }
         }
     }

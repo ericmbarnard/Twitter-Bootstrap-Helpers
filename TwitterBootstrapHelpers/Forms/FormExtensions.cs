@@ -20,67 +20,67 @@ namespace TwitterBootstrapHelpers
     {
         #region Form
         
-        public static MvcForm BeginForm(this TBHelper htmlHelper)
+        public static MvcForm BeginForm(this TbHelper htmlHelper)
         {
             return System.Web.Mvc.Html.FormExtensions.BeginForm(htmlHelper.ToHtmlHelper(), null, null, FormMethod.Post, new { @class = "form-vertical" });
         }
 
-        public static MvcForm BeginForm(this TBHelper htmlHelper, object routeValues)
+        public static MvcForm BeginForm(this TbHelper htmlHelper, object routeValues)
         {
             return BeginForm(htmlHelper, null, null, new RouteValueDictionary(routeValues), FormMethod.Post, new RouteValueDictionary());
         }
 
-        public static MvcForm BeginForm(this TBHelper htmlHelper, RouteValueDictionary routeValues)
+        public static MvcForm BeginForm(this TbHelper htmlHelper, RouteValueDictionary routeValues)
         {
             return BeginForm(htmlHelper, null, null, routeValues, FormMethod.Post, new RouteValueDictionary());
         }
 
-        public static MvcForm BeginForm(this TBHelper htmlHelper, string actionName, string controllerName)
+        public static MvcForm BeginForm(this TbHelper htmlHelper, string actionName, string controllerName)
         {
             return BeginForm(htmlHelper, actionName, controllerName, new RouteValueDictionary(), FormMethod.Post, new RouteValueDictionary());
         }
 
-        public static MvcForm BeginForm(this TBHelper htmlHelper, string actionName, string controllerName, object routeValues)
+        public static MvcForm BeginForm(this TbHelper htmlHelper, string actionName, string controllerName, object routeValues)
         {
             return BeginForm(htmlHelper, actionName, controllerName, new RouteValueDictionary(routeValues), FormMethod.Post, new RouteValueDictionary());
         }
 
-        public static MvcForm BeginForm(this TBHelper htmlHelper, string actionName, string controllerName, RouteValueDictionary routeValues)
+        public static MvcForm BeginForm(this TbHelper htmlHelper, string actionName, string controllerName, RouteValueDictionary routeValues)
         {
             return BeginForm(htmlHelper, actionName, controllerName, routeValues, FormMethod.Post, new RouteValueDictionary());
         }
 
-        public static MvcForm BeginForm(this TBHelper htmlHelper, string actionName, string controllerName, FormMethod method)
+        public static MvcForm BeginForm(this TbHelper htmlHelper, string actionName, string controllerName, FormMethod method)
         {
             return BeginForm(htmlHelper, actionName, controllerName, new RouteValueDictionary(), method, new RouteValueDictionary());
         }
 
-        public static MvcForm BeginForm(this TBHelper htmlHelper, string actionName, string controllerName, object routeValues, FormMethod method)
+        public static MvcForm BeginForm(this TbHelper htmlHelper, string actionName, string controllerName, object routeValues, FormMethod method)
         {
             return BeginForm(htmlHelper, actionName, controllerName, new RouteValueDictionary(routeValues), method, new RouteValueDictionary());
         }
 
-        public static MvcForm BeginForm(this TBHelper htmlHelper, string actionName, string controllerName, RouteValueDictionary routeValues, FormMethod method)
+        public static MvcForm BeginForm(this TbHelper htmlHelper, string actionName, string controllerName, RouteValueDictionary routeValues, FormMethod method)
         {
             return BeginForm(htmlHelper, actionName, controllerName, routeValues, method, new RouteValueDictionary());
         }
 
-        public static MvcForm BeginForm(this TBHelper htmlHelper, string actionName, string controllerName, FormMethod method, object htmlAttributes)
+        public static MvcForm BeginForm(this TbHelper htmlHelper, string actionName, string controllerName, FormMethod method, object htmlAttributes)
         {
             return BeginForm(htmlHelper, actionName, controllerName, new RouteValueDictionary(), method, HtmlHelper.AnonymousObjectToHtmlAttributes(htmlAttributes));
         }
 
-        public static MvcForm BeginForm(this TBHelper htmlHelper, string actionName, string controllerName, FormMethod method, IDictionary<string, object> htmlAttributes)
+        public static MvcForm BeginForm(this TbHelper htmlHelper, string actionName, string controllerName, FormMethod method, IDictionary<string, object> htmlAttributes)
         {
             return BeginForm(htmlHelper, actionName, controllerName, new RouteValueDictionary(), method, htmlAttributes);
         }
 
-        public static MvcForm BeginForm(this TBHelper htmlHelper, string actionName, string controllerName, object routeValues, FormMethod method, object htmlAttributes)
+        public static MvcForm BeginForm(this TbHelper htmlHelper, string actionName, string controllerName, object routeValues, FormMethod method, object htmlAttributes)
         {
             return BeginForm(htmlHelper, actionName, controllerName, new RouteValueDictionary(routeValues), method, HtmlHelper.AnonymousObjectToHtmlAttributes(htmlAttributes));
         }
 
-        public static MvcForm BeginForm(this TBHelper htmlHelper, string actionName, string controllerName, RouteValueDictionary routeValues, FormMethod method, IDictionary<string, object> htmlAttributes)
+        public static MvcForm BeginForm(this TbHelper htmlHelper, string actionName, string controllerName, RouteValueDictionary routeValues, FormMethod method, IDictionary<string, object> htmlAttributes)
         {
             return FormHelper(htmlHelper, actionName, controllerName, routeValues, method, htmlAttributes);
         }
@@ -89,87 +89,87 @@ namespace TwitterBootstrapHelpers
 
         #region Route Forms
         
-        public static MvcForm BeginRouteForm(this TBHelper htmlHelper, object routeValues)
+        public static MvcForm BeginRouteForm(this TbHelper htmlHelper, object routeValues)
         {
             return BeginRouteForm(htmlHelper, null /* routeName */, new RouteValueDictionary(routeValues), FormMethod.Post, new RouteValueDictionary());
         }
 
-        public static MvcForm BeginRouteForm(this TBHelper htmlHelper, RouteValueDictionary routeValues)
+        public static MvcForm BeginRouteForm(this TbHelper htmlHelper, RouteValueDictionary routeValues)
         {
             return BeginRouteForm(htmlHelper, null /* routeName */, routeValues, FormMethod.Post, new RouteValueDictionary());
         }
 
-        public static MvcForm BeginRouteForm(this TBHelper htmlHelper, string routeName)
+        public static MvcForm BeginRouteForm(this TbHelper htmlHelper, string routeName)
         {
             return BeginRouteForm(htmlHelper, routeName, new RouteValueDictionary(), FormMethod.Post, new RouteValueDictionary());
         }
 
-        public static MvcForm BeginRouteForm(this TBHelper htmlHelper, string routeName, object routeValues)
+        public static MvcForm BeginRouteForm(this TbHelper htmlHelper, string routeName, object routeValues)
         {
             return BeginRouteForm(htmlHelper, routeName, new RouteValueDictionary(routeValues), FormMethod.Post, new RouteValueDictionary());
         }
 
-        public static MvcForm BeginRouteForm(this TBHelper htmlHelper, string routeName, RouteValueDictionary routeValues)
+        public static MvcForm BeginRouteForm(this TbHelper htmlHelper, string routeName, RouteValueDictionary routeValues)
         {
             return BeginRouteForm(htmlHelper, routeName, routeValues, FormMethod.Post, new RouteValueDictionary());
         }
 
-        public static MvcForm BeginRouteForm(this TBHelper htmlHelper, string routeName, FormMethod method)
+        public static MvcForm BeginRouteForm(this TbHelper htmlHelper, string routeName, FormMethod method)
         {
             return BeginRouteForm(htmlHelper, routeName, new RouteValueDictionary(), method, new RouteValueDictionary());
         }
 
-        public static MvcForm BeginRouteForm(this TBHelper htmlHelper, string routeName, object routeValues, FormMethod method)
+        public static MvcForm BeginRouteForm(this TbHelper htmlHelper, string routeName, object routeValues, FormMethod method)
         {
             return BeginRouteForm(htmlHelper, routeName, new RouteValueDictionary(routeValues), method, new RouteValueDictionary());
         }
 
-        public static MvcForm BeginRouteForm(this TBHelper htmlHelper, string routeName, RouteValueDictionary routeValues, FormMethod method)
+        public static MvcForm BeginRouteForm(this TbHelper htmlHelper, string routeName, RouteValueDictionary routeValues, FormMethod method)
         {
             return BeginRouteForm(htmlHelper, routeName, routeValues, method, new RouteValueDictionary());
         }
 
-        public static MvcForm BeginRouteForm(this TBHelper htmlHelper, string routeName, FormMethod method, object htmlAttributes)
+        public static MvcForm BeginRouteForm(this TbHelper htmlHelper, string routeName, FormMethod method, object htmlAttributes)
         {
             return RouteFormHelper(htmlHelper, routeName, new RouteValueDictionary(), method, HtmlHelper.AnonymousObjectToHtmlAttributes(htmlAttributes));
         }
 
-        public static MvcForm BeginRouteForm(this TBHelper htmlHelper, string routeName, FormMethod method, IDictionary<string, object> htmlAttributes)
+        public static MvcForm BeginRouteForm(this TbHelper htmlHelper, string routeName, FormMethod method, IDictionary<string, object> htmlAttributes)
         {
             return RouteFormHelper(htmlHelper, routeName, new RouteValueDictionary(), method, htmlAttributes);
         }
 
-        public static MvcForm BeginRouteForm(this TBHelper htmlHelper, string routeName, object routeValues, FormMethod method, object htmlAttributes)
+        public static MvcForm BeginRouteForm(this TbHelper htmlHelper, string routeName, object routeValues, FormMethod method, object htmlAttributes)
         {
             return RouteFormHelper(htmlHelper, routeName, new RouteValueDictionary(routeValues), method, HtmlHelper.AnonymousObjectToHtmlAttributes(htmlAttributes));
         }
 
-        public static MvcForm BeginRouteForm(this TBHelper htmlHelper, string routeName, RouteValueDictionary routeValues, FormMethod method, IDictionary<string, object> htmlAttributes)
+        public static MvcForm BeginRouteForm(this TbHelper htmlHelper, string routeName, RouteValueDictionary routeValues, FormMethod method, IDictionary<string, object> htmlAttributes)
         {
             return RouteFormHelper(htmlHelper, routeName, routeValues, method, htmlAttributes);
         }
 
         #endregion
 
-        internal static MvcForm RouteFormHelper(this TBHelper htmlHelper, FormStyle formStyle, string routeName, RouteValueDictionary routeValues, FormMethod method, IDictionary<string, object> htmlAttributes)
+        internal static MvcForm RouteFormHelper(this TbHelper htmlHelper, FormStyle formStyle, string routeName, RouteValueDictionary routeValues, FormMethod method, IDictionary<string, object> htmlAttributes)
         {
             htmlAttributes = BuildFormCss(htmlAttributes, formStyle);
             return System.Web.Mvc.Html.FormExtensions.BeginRouteForm(htmlHelper.ToHtmlHelper(), routeName, routeValues, method, htmlAttributes);
         }
 
-        internal static MvcForm RouteFormHelper(this TBHelper htmlHelper, string routeName, RouteValueDictionary routeValues, FormMethod method, IDictionary<string, object> htmlAttributes)
+        internal static MvcForm RouteFormHelper(this TbHelper htmlHelper, string routeName, RouteValueDictionary routeValues, FormMethod method, IDictionary<string, object> htmlAttributes)
         {
             htmlAttributes = BuildFormCss(htmlAttributes, FormStyle.Vertical);
             return System.Web.Mvc.Html.FormExtensions.BeginRouteForm(htmlHelper.ToHtmlHelper(), routeName, routeValues, method, htmlAttributes);
         }
 
-        internal static MvcForm FormHelper(this TBHelper htmlHelper, string actionName, string controllerName, RouteValueDictionary routeValues, FormMethod method, IDictionary<string, object> htmlAttributes)
+        internal static MvcForm FormHelper(this TbHelper htmlHelper, string actionName, string controllerName, RouteValueDictionary routeValues, FormMethod method, IDictionary<string, object> htmlAttributes)
         {
             htmlAttributes = BuildFormCss(htmlAttributes, FormStyle.Vertical);
             return System.Web.Mvc.Html.FormExtensions.BeginForm(htmlHelper.ToHtmlHelper(), actionName, controllerName, routeValues, method, htmlAttributes);
         }
 
-        internal static MvcForm FormHelper(this TBHelper htmlHelper, FormStyle formStyle, string actionName, string controllerName, RouteValueDictionary routeValues, FormMethod method, IDictionary<string, object> htmlAttributes)
+        internal static MvcForm FormHelper(this TbHelper htmlHelper, FormStyle formStyle, string actionName, string controllerName, RouteValueDictionary routeValues, FormMethod method, IDictionary<string, object> htmlAttributes)
         {
             htmlAttributes = BuildFormCss(htmlAttributes, formStyle);
             return System.Web.Mvc.Html.FormExtensions.BeginForm(htmlHelper.ToHtmlHelper(), actionName, controllerName, routeValues, method, htmlAttributes);

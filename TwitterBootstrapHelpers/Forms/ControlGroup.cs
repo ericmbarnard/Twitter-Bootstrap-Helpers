@@ -28,18 +28,18 @@ namespace TwitterBootstrapHelpers.Forms
         {
             base.OnWriteTag(tagBuilder, renderMode, viewContext);
 
-            tagBuilder.AddCssClass(TBCss.CONTROL_GROUP);
+            tagBuilder.AddCssClass(TbCss.CONTROL_GROUP);
 
             switch (Validation)
             {
                 case ControlGroupValidation.Warning:
-                    tagBuilder.AddCssClass(TBCss.WARNING);
+                    tagBuilder.AddCssClass(TbCss.WARNING);
                     break;
                 case ControlGroupValidation.Error:
-                    tagBuilder.AddCssClass(TBCss.ERROR);
+                    tagBuilder.AddCssClass(TbCss.ERROR);
                     break;
                 case ControlGroupValidation.Success:
-                    tagBuilder.AddCssClass(TBCss.SUCCESS);
+                    tagBuilder.AddCssClass(TbCss.SUCCESS);
                     break;
                 case ControlGroupValidation.None:
                 default:

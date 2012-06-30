@@ -20,7 +20,7 @@ namespace TwitterBootstrapHelpers.Forms
         {
             base.OnWriteTag(tagBuilder, renderMode, viewContext);
 
-            tagBuilder.AddCssClass(TBCss.CONTROLS);
+            tagBuilder.AddCssClass(TbCss.CONTROLS);
         }
     }
 }

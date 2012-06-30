@@ -11,39 +11,39 @@ namespace TwitterBootstrapHelpers
     {
         #region Label
         
-        public static MvcHtmlString Label(this TBHelper html, string expression)
+        public static MvcHtmlString Label(this TbHelper html, string expression)
         {
             return Label(html,
                          expression,
                          labelText: null);
         }
 
-        public static MvcHtmlString Label(this TBHelper html, string expression, string labelText)
+        public static MvcHtmlString Label(this TbHelper html, string expression, string labelText)
         {
             return Label(html, expression, labelText, htmlAttributes: null, metadataProvider: null);
         }
 
-        public static MvcHtmlString Label(this TBHelper html, string expression, object htmlAttributes)
+        public static MvcHtmlString Label(this TbHelper html, string expression, object htmlAttributes)
         {
             return Label(html, expression, labelText: null, htmlAttributes: htmlAttributes, metadataProvider: null);
         }
 
-        public static MvcHtmlString Label(this TBHelper html, string expression, IDictionary<string, object> htmlAttributes)
+        public static MvcHtmlString Label(this TbHelper html, string expression, IDictionary<string, object> htmlAttributes)
         {
             return Label(html, expression, labelText: null, htmlAttributes: htmlAttributes, metadataProvider: null);
         }
 
-        public static MvcHtmlString Label(this TBHelper html, string expression, string labelText, object htmlAttributes)
+        public static MvcHtmlString Label(this TbHelper html, string expression, string labelText, object htmlAttributes)
         {
             return Label(html, expression, labelText, htmlAttributes, metadataProvider: null);
         }
 
-        public static MvcHtmlString Label(this TBHelper html, string expression, string labelText, IDictionary<string, object> htmlAttributes)
+        public static MvcHtmlString Label(this TbHelper html, string expression, string labelText, IDictionary<string, object> htmlAttributes)
         {
             return Label(html, expression, labelText, htmlAttributes, metadataProvider: null);
         }
 
-        internal static MvcHtmlString Label(this TBHelper html, string expression, string labelText, object htmlAttributes, ModelMetadataProvider metadataProvider)
+        internal static MvcHtmlString Label(this TbHelper html, string expression, string labelText, object htmlAttributes, ModelMetadataProvider metadataProvider)
         {
             return Label(html,
                          expression,
@@ -52,7 +52,7 @@ namespace TwitterBootstrapHelpers
                          metadataProvider);
         }
 
-        internal static MvcHtmlString Label(this TBHelper html, string expression, string labelText, IDictionary<string, object> htmlAttributes, ModelMetadataProvider metadataProvider)
+        internal static MvcHtmlString Label(this TbHelper html, string expression, string labelText, IDictionary<string, object> htmlAttributes, ModelMetadataProvider metadataProvider)
         {
             return LabelHelper(html,
                                ModelMetadata.FromStringExpression(expression, html.ViewData),
@@ -117,39 +117,39 @@ namespace TwitterBootstrapHelpers
 
         #region LabelForModel
         
-        public static MvcHtmlString LabelForModel(this TBHelper html)
+        public static MvcHtmlString LabelForModel(this TbHelper html)
         {
             return LabelForModel(html, labelText: null);
         }
 
-        public static MvcHtmlString LabelForModel(this TBHelper html, string labelText)
+        public static MvcHtmlString LabelForModel(this TbHelper html, string labelText)
         {
             return LabelHelper(html, html.ViewData.ModelMetadata, String.Empty, labelText);
         }
 
-        public static MvcHtmlString LabelForModel(this TBHelper html, object htmlAttributes)
+        public static MvcHtmlString LabelForModel(this TbHelper html, object htmlAttributes)
         {
             return LabelHelper(html, html.ViewData.ModelMetadata, String.Empty, labelText: null, htmlAttributes: HtmlHelper.AnonymousObjectToHtmlAttributes(htmlAttributes));
         }
 
-        public static MvcHtmlString LabelForModel(this TBHelper html, IDictionary<string, object> htmlAttributes)
+        public static MvcHtmlString LabelForModel(this TbHelper html, IDictionary<string, object> htmlAttributes)
         {
             return LabelHelper(html, html.ViewData.ModelMetadata, String.Empty, labelText: null, htmlAttributes: htmlAttributes);
         }
 
-        public static MvcHtmlString LabelForModel(this TBHelper html, string labelText, object htmlAttributes)
+        public static MvcHtmlString LabelForModel(this TbHelper html, string labelText, object htmlAttributes)
         {
             return LabelHelper(html, html.ViewData.ModelMetadata, String.Empty, labelText, HtmlHelper.AnonymousObjectToHtmlAttributes(htmlAttributes));
         }
 
-        public static MvcHtmlString LabelForModel(this TBHelper html, string labelText, IDictionary<string, object> htmlAttributes)
+        public static MvcHtmlString LabelForModel(this TbHelper html, string labelText, IDictionary<string, object> htmlAttributes)
         {
             return LabelHelper(html, html.ViewData.ModelMetadata, String.Empty, labelText, htmlAttributes);
         }
 
         #endregion
 
-        internal static MvcHtmlString LabelHelper(TBHelper html, ModelMetadata metadata, string htmlFieldName, string labelText = null, IDictionary<string, object> htmlAttributes = null)
+        internal static MvcHtmlString LabelHelper(TbHelper html, ModelMetadata metadata, string htmlFieldName, string labelText = null, IDictionary<string, object> htmlAttributes = null)
         {
             string resolvedLabelText = labelText ?? metadata.DisplayName ?? metadata.PropertyName ?? htmlFieldName.Split('.').Last();
             if (String.IsNullOrEmpty(resolvedLabelText))
@@ -163,7 +163,7 @@ namespace TwitterBootstrapHelpers
             tag.MergeAttributes(htmlAttributes, replaceExisting: true);
             
             // the magic
-            tag.AddCssClass(TBCss.CONTROL_LABEL);
+            tag.AddCssClass(TbCss.CONTROL_LABEL);
 
             return new MvcHtmlString(tag.ToString(TagRenderMode.Normal));
         }
