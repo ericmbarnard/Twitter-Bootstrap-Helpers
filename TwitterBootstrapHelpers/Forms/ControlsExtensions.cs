@@ -13,17 +13,17 @@ namespace TwitterBootstrapHelpers
     {
         #region API
 
-        public static Controls BeginControlGroup(this TbHelper helper)
+        public static Controls BeginControlsGroup(this TbHelper helper)
         {
             return BeginControlsHelper(helper, htmlAttributes: null);
         }
 
-        public static Controls BeginControlGroup(this TbHelper helper, IDictionary<string, object> htmlAttributes)
+        public static Controls BeginControlsGroup(this TbHelper helper, IDictionary<string, object> htmlAttributes)
         {
             return BeginControlsHelper(helper, htmlAttributes: htmlAttributes);
         }
 
-        public static Controls BeginControlGroup(this TbHelper helper, object htmlAttributes)
+        public static Controls BeginControlsGroup(this TbHelper helper, object htmlAttributes)
         {
             return BeginControlsHelper(helper, htmlAttributes: HtmlHelper.AnonymousObjectToHtmlAttributes(htmlAttributes));
         }
